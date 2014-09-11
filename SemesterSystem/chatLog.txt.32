@@ -1,0 +1,12 @@
+sep. 11, 2014 7:01:46 PM Server.MainServer handleConnections
+INFO: Connected to a client
+sep. 11, 2014 7:01:47 PM Server.MainServer handleConnections
+INFO: Connected to a client
+sep. 11, 2014 7:01:54 PM Server.ClientHandler run
+INFO: Received the message: SENDTEST#HEJ TEST 
+sep. 11, 2014 7:01:54 PM Server.ClientHandler run
+INFO: Received the message: SENDTEST#HEJ TEST 
+sep. 11, 2014 7:02:04 PM Server.ClientHandler run
+INFO: Received the message: SENDTEST1#HEJ TEST1 
+sep. 11, 2014 7:02:04 PM Server.ClientHandler run
+INFO: Received the message: SENDTEST1#HEJ TEST1 

@@ -41,7 +41,7 @@ public class ClientHandler extends Thread {
                     System.out.println("bla bla");
                     ms.addClient(protocolStrings[1], this);
                 }
-                if (protocolStrings[0].equals("SEND"))
+                else if (protocolStrings[0].equals("SEND"))
                 {
                     System.out.println("fucklort");
                     send(protocolStrings[1],protocolStrings[2]); 
@@ -59,6 +59,8 @@ public class ClientHandler extends Thread {
 
     public void send(String userName, String msg) {
         System.out.println("bla bla send");
+        System.out.println("Msg: "+ msg);
+        System.out.println("Username: " + userName);
         writer.println(msg);
         
     }

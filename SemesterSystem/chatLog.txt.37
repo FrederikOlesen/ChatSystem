@@ -1,0 +1,18 @@
+sep. 11, 2014 7:14:49 PM Server.MainServer handleConnections
+INFO: Connected to a client
+sep. 11, 2014 7:14:49 PM Server.ClientHandler run
+INFO: Received the message: CONNECT#FOERSTE 
+sep. 11, 2014 7:14:49 PM Server.ClientHandler run
+INFO: Received the message: CONNECT#FOERSTE 
+sep. 11, 2014 7:15:02 PM Server.MainServer handleConnections
+INFO: Connected to a client
+sep. 11, 2014 7:15:02 PM Server.ClientHandler run
+INFO: Received the message: CONNECT#ANDEN 
+sep. 11, 2014 7:15:02 PM Server.ClientHandler run
+INFO: Received the message: CONNECT#ANDEN 
+sep. 11, 2014 7:15:16 PM Server.ClientHandler run
+INFO: Received the message: SEND#FOERSTE#HEJ 
+sep. 11, 2014 7:15:31 PM Server.ClientHandler run
+INFO: Received the message: SEND#ANDEN#HEJ 
+sep. 11, 2014 7:19:33 PM Server.ClientHandler run
+INFO: Closed a Connection
