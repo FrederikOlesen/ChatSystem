@@ -72,6 +72,12 @@ public class ChatClient extends Thread implements ChatList{
         output.println(msgFormat);
     }
     
+    public void sendUserName(String userName)
+    {
+        String msgFormat ="CONNECT#" + userName;
+        output.println(msgFormat);
+    }
+    
     public void close() throws IOException {
         output.println(ProtocolStrings.STOP);
     }

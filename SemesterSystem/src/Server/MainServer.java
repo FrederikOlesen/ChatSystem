@@ -21,15 +21,29 @@ public class MainServer {
     private static List<ClientHandler> clients = new ArrayList<>();
     static Map<String, ClientHandler> onlineUsers = new HashMap<>();
 
+    
+    
     public static void stopServer() {
         keepRunning = false;
     }
 
     public static void send(String userName, String msg) {
-        for (ClientHandler c : clients) {
+        ClientHandler c = null; 
+      
+        String user = userName; 
+        System.out.println(user);
+        System.out.println("Out of method");
+        if (onlineUsers.containsKey(user))
+        {
+            System.out.println("Inside method");
             c.send(userName, msg);
         }
+       
+//        for (ClientHandler c : clients) {
+//            c.send(userName, msg);
+//        }
         System.out.println("Server message was: " + msg);
+        System.out.println(onlineUsers.values().toString());
 
     }
 
@@ -44,6 +58,8 @@ public class MainServer {
     public void addClient(String userName, ClientHandler ch) {
         onlineUsers.put(userName, ch);
         sendOnline();
+        System.out.println(onlineUsers.size());
+        
     }
 
     private void sendOnline() {

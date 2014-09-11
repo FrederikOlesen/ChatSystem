@@ -190,7 +190,7 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
         try {
             cc.connect(jTextFieldHost.getText(), Integer.parseInt(jTextFieldPort.getText()));
             jTextArea1.setText("Connected as: " + jTextFieldUsername.getText());
-
+            cc.sendUserName(jTextFieldUsername.getText());
         } catch (IOException ex) {
             Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, null, ex);
         }

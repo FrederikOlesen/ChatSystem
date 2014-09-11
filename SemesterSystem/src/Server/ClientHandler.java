@@ -40,6 +40,7 @@ public class ClientHandler extends Thread {
                 if (protocolStrings[0].equals("CONNECT"))
                 {
                     System.out.println("bla bla");
+                    System.out.println(protocolStrings[1]);
                     ms.addClient(protocolStrings[1], this);
                 }
                 else if (protocolStrings[0].equals("SEND"))
