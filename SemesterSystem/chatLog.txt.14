@@ -1,0 +1,30 @@
+sep. 11, 2014 1:00:15 PM Server.MainServer main
+INFO: Connected to a client
+sep. 11, 2014 1:00:20 PM Server.MainServer main
+INFO: Connected to a client
+sep. 11, 2014 1:00:23 PM Server.ClientHandler run
+INFO: Received the message: FREDERIK: ENTER MESSAGE 
+sep. 11, 2014 1:00:23 PM Server.ClientHandler run
+INFO: Received the message: FREDERIK: ENTER MESSAGE 
+sep. 11, 2014 1:00:26 PM Server.ClientHandler run
+INFO: Received the message: MADS: ENTER MESSAGE 
+sep. 11, 2014 1:00:26 PM Server.ClientHandler run
+INFO: Received the message: MADS: ENTER MESSAGE 
+sep. 11, 2014 1:00:46 PM Server.ClientHandler run
+INFO: Received the message: MADS: ENTER MESSAGE 
+sep. 11, 2014 1:00:55 PM Server.ClientHandler run
+INFO: Received the message: FREDERIK: ENTER MESSAGE 
+sep. 11, 2014 1:01:14 PM Server.ClientHandler run
+INFO: Received the message: FREDERIK: ENTER MESSAGE 
+sep. 11, 2014 1:01:15 PM Server.ClientHandler run
+INFO: Received the message: FREDERIK: ENTER MESSAGE 
+sep. 11, 2014 1:01:15 PM Server.ClientHandler run
+INFO: Received the message: FREDERIK: ENTER MESSAGE 
+sep. 11, 2014 1:01:15 PM Server.ClientHandler run
+INFO: Received the message: FREDERIK: ENTER MESSAGE 
+sep. 11, 2014 1:01:16 PM Server.ClientHandler run
+INFO: Received the message: FREDERIK: ENTER MESSAGE 
+sep. 11, 2014 1:01:16 PM Server.ClientHandler run
+INFO: Received the message: FREDERIK: ENTER MESSAGE 
+sep. 11, 2014 1:01:16 PM Server.ClientHandler run
+INFO: Received the message: FREDERIK: ENTER MESSAGE 

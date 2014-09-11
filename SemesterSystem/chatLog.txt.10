@@ -1,0 +1,40 @@
+sep. 11, 2014 12:48:34 PM Server.MainServer main
+INFO: Connected to a client
+sep. 11, 2014 12:48:39 PM Server.MainServer main
+INFO: Connected to a client
+sep. 11, 2014 12:48:41 PM Server.ClientHandler run
+INFO: Received the message: MICHAEL: ENTER MESSAGE 
+sep. 11, 2014 12:48:41 PM Server.ClientHandler run
+INFO: Received the message: MICHAEL: ENTER MESSAGE 
+sep. 11, 2014 12:48:43 PM Server.ClientHandler run
+INFO: Received the message: MADS: ENTER MESSAGE 
+sep. 11, 2014 12:48:43 PM Server.ClientHandler run
+INFO: Received the message: MADS: ENTER MESSAGE 
+sep. 11, 2014 12:50:09 PM Server.MainServer main
+INFO: Connected to a client
+sep. 11, 2014 12:50:13 PM Server.MainServer main
+INFO: Connected to a client
+sep. 11, 2014 12:50:21 PM Server.ClientHandler run
+INFO: Received the message: MICHAEL: ENTER MESSAGE 
+sep. 11, 2014 12:50:21 PM Server.ClientHandler run
+INFO: Received the message: MICHAEL: ENTER MESSAGE 
+sep. 11, 2014 12:50:23 PM Server.ClientHandler run
+INFO: Received the message: MICHAEL: ENTER MESSAGE 
+sep. 11, 2014 12:50:24 PM Server.ClientHandler run
+INFO: Received the message: MADS: ENTER MESSAGE 
+sep. 11, 2014 12:50:24 PM Server.ClientHandler run
+INFO: Received the message: MADS: ENTER MESSAGE 
+sep. 11, 2014 12:50:25 PM Server.ClientHandler run
+INFO: Received the message: MADS: ENTER MESSAGE 
+sep. 11, 2014 12:50:26 PM Server.ClientHandler run
+INFO: Received the message: MADS: ENTER MESSAGE 
+sep. 11, 2014 12:50:26 PM Server.ClientHandler run
+INFO: Received the message: MADS: ENTER MESSAGE 
+sep. 11, 2014 12:50:26 PM Server.ClientHandler run
+INFO: Received the message: MADS: ENTER MESSAGE 
+sep. 11, 2014 12:50:27 PM Server.ClientHandler run
+INFO: Received the message: MADS: ENTER MESSAGE 
+sep. 11, 2014 12:50:28 PM Server.ClientHandler run
+INFO: Received the message: MICHAEL: ENTER MESSAGE 
+sep. 11, 2014 12:50:29 PM Server.ClientHandler run
+INFO: Received the message: MICHAEL: ENTER MESSAGE 

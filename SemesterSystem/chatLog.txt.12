@@ -1,0 +1,18 @@
+sep. 11, 2014 12:54:42 PM Server.MainServer main
+INFO: Connected to a client
+sep. 11, 2014 12:54:43 PM Server.ClientHandler run
+INFO: Received the message: USERNAME: ENTER MESSAGE 
+sep. 11, 2014 12:54:43 PM Server.ClientHandler run
+INFO: Received the message: USERNAME: ENTER MESSAGE 
+sep. 11, 2014 12:55:33 PM Server.MainServer main
+INFO: Connected to a client
+sep. 11, 2014 12:55:37 PM Server.MainServer main
+INFO: Connected to a client
+sep. 11, 2014 12:55:38 PM Server.ClientHandler run
+INFO: Received the message: MICHAEL: ENTER MESSAGE 
+sep. 11, 2014 12:55:38 PM Server.ClientHandler run
+INFO: Received the message: MICHAEL: ENTER MESSAGE 
+sep. 11, 2014 12:55:41 PM Server.ClientHandler run
+INFO: Received the message: MADS: ENTER MESSAGE 
+sep. 11, 2014 12:55:41 PM Server.ClientHandler run
+INFO: Received the message: MADS: ENTER MESSAGE 

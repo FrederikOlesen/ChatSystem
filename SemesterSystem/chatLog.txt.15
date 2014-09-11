@@ -1,0 +1,22 @@
+sep. 11, 2014 1:03:14 PM Server.MainServer main
+INFO: Connected to a client
+sep. 11, 2014 1:03:31 PM Server.MainServer main
+INFO: Connected to a client
+sep. 11, 2014 1:03:38 PM Server.ClientHandler run
+INFO: Received the message: FREDERIK: TEST1 
+sep. 11, 2014 1:03:38 PM Server.ClientHandler run
+INFO: Received the message: FREDERIK: TEST1 
+sep. 11, 2014 1:03:46 PM Server.ClientHandler run
+INFO: Received the message: MADS: TEST2 
+sep. 11, 2014 1:03:46 PM Server.ClientHandler run
+INFO: Received the message: MADS: TEST2 
+sep. 11, 2014 1:49:36 PM Server.MainServer main
+INFO: Connected to a client
+sep. 11, 2014 1:49:42 PM Server.MainServer main
+INFO: Connected to a client
+sep. 11, 2014 1:49:44 PM Server.ClientHandler run
+INFO: Received the message: FREDERIK: ENTER MESSAGE 
+sep. 11, 2014 1:49:44 PM Server.ClientHandler run
+INFO: Received the message: FREDERIK: ENTER MESSAGE 
+sep. 11, 2014 1:49:46 PM Server.MainServer main
+INFO: Connected to a client

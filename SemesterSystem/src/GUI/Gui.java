@@ -7,12 +7,13 @@ package GUI;
 
 import Client.ChatClient;
 import Client.ChatList;
+import Server.ClientHandler;
+import Server.Control;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JFrame;
 
 /**
  *
@@ -21,7 +22,7 @@ import javax.swing.JFrame;
 public class Gui extends javax.swing.JFrame implements ChatList, ActionListener {
 
     ChatClient cc = new ChatClient();
-
+    Control c = new Control(); 
     /**
      * Creates new form Gui
      */
@@ -184,6 +185,7 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
         try {
             cc.connect(jTextFieldHost.getText(), Integer.parseInt(jTextFieldPort.getText()));
             jTextArea1.setText("Connected as: " + jTextFieldUsername.getText());
+
         } catch (IOException ex) {
             Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -196,6 +198,8 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
         //messageArrived(message);
         cc.send(jTextFieldUsername.getText() + ": " + message);
         // TODO add your handling code here:
+
+        
     }//GEN-LAST:event_jButtonSubmitActionPerformed
 
     private void jButtonCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCloseActionPerformed

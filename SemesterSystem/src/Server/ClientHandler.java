@@ -7,6 +7,7 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import Utils.ProtocolStrings;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,9 +18,11 @@ public class ClientHandler extends Thread {
     private final Socket socket;
     private final Scanner input;
     private final PrintWriter writer;
+    MainServer ms;
 
-    public ClientHandler(Socket socket) throws IOException {
+    public ClientHandler(Socket socket, MainServer ms) throws IOException {
         this.socket = socket;
+        this.ms = ms;
         input = new Scanner(socket.getInputStream());
         writer = new PrintWriter(socket.getOutputStream(), true);
     }
@@ -27,11 +30,17 @@ public class ClientHandler extends Thread {
     @Override
     public void run() {
         try {
+            
             String message = input.nextLine(); //IMPORTANT blocking call
+            String[] protocolStrings = message.split("#");
             Logger.getLogger(MainServer.class.getName()).log(Level.INFO, String.format("Received the message: %1$S ", message));
             while (!message.equals(ProtocolStrings.STOP)) {
 //                writer.println(message.toUpperCase());
-                MainServer.send(message);
+                if (protocolStrings[0].equals("CONNECT"))
+                {
+                    System.out.println("bla bla");
+                    ms.addClient(protocolStrings[1], this);
+                }
                 Logger.getLogger(MainServer.class.getName()).log(Level.INFO, String.format("Received the message: %1$S ", message.toUpperCase()));
                 message = input.nextLine(); //IMPORTANT blocking call
             }
@@ -44,8 +53,9 @@ public class ClientHandler extends Thread {
     }
 
     public void send(String msg) {
+        System.out.println("bla bla send");
         writer.println(msg);
+        
     }
-    
-    
+
 }
