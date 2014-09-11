@@ -67,8 +67,9 @@ public class ChatClient extends Thread implements ChatList{
         }
     }
     
-    public void send(String msg) {
-        output.println(msg);
+    public void send(String recieve, String msg) {
+        String msgFormat ="SEND#" + recieve + "#" + msg;
+        output.println(msgFormat);
     }
     
     public void close() throws IOException {
@@ -106,7 +107,7 @@ public class ChatClient extends Thread implements ChatList{
             
             tester.connect(ip, port);
             System.out.println("Sending 'Hello world'");
-            tester.send("Hello World");
+            //tester.send("Hello World");
             System.out.println("Waiting for a reply");
             tester.close();
             //System.in.read();      

@@ -22,7 +22,8 @@ import java.util.logging.Logger;
 public class Gui extends javax.swing.JFrame implements ChatList, ActionListener {
 
     ChatClient cc = new ChatClient();
-    Control c = new Control(); 
+    Control c = new Control();
+
     /**
      * Creates new form Gui
      */
@@ -56,6 +57,7 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
         jTextArea2 = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
         jButtonClose = new javax.swing.JButton();
+        jTextFieldReciever = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -122,7 +124,8 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonConnect, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jTextFieldHost)
-                    .addComponent(jButtonClose, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButtonClose, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTextFieldReciever))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -147,15 +150,17 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextFieldUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(16, 16, 16)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                                .addComponent(jTextFieldReciever, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
                                 .addComponent(jButtonConnect)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButtonClose)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE))
+                                .addGap(18, 18, 18))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jScrollPane1)
                                 .addGap(13, 13, 13)))
-                        .addComponent(jTextFieldMessage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldMessage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonClose)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -196,10 +201,10 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
     private void jButtonSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubmitActionPerformed
         String message = jTextFieldMessage.getText();
         //messageArrived(message);
-        cc.send(jTextFieldUsername.getText() + ": " + message);
+        cc.send(jTextFieldReciever.getText(), message);
         // TODO add your handling code here:
 
-        
+
     }//GEN-LAST:event_jButtonSubmitActionPerformed
 
     private void jButtonCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCloseActionPerformed
@@ -273,6 +278,7 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
     private javax.swing.JTextField jTextFieldHost;
     private javax.swing.JTextField jTextFieldMessage;
     private javax.swing.JTextField jTextFieldPort;
+    private javax.swing.JTextField jTextFieldReciever;
     private javax.swing.JTextField jTextFieldUsername;
     // End of variables declaration//GEN-END:variables
 }
