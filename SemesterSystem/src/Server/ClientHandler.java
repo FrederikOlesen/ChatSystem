@@ -33,6 +33,7 @@ public class ClientHandler extends Thread {
             
             String message = input.nextLine(); //IMPORTANT blocking call
             String[] protocolStrings = message.split("#");
+            
             Logger.getLogger(MainServer.class.getName()).log(Level.INFO, String.format("Received the message: %1$S ", message));
             while (!message.equals(ProtocolStrings.STOP)) {
 //                writer.println(message.toUpperCase());
@@ -44,7 +45,7 @@ public class ClientHandler extends Thread {
                 else if (protocolStrings[0].equals("SEND"))
                 {
                     System.out.println("fucklort");
-                    send(protocolStrings[1],protocolStrings[2]); 
+                    MainServer.send(protocolStrings[1],protocolStrings[2]); 
                 }
                 Logger.getLogger(MainServer.class.getName()).log(Level.INFO, String.format("Received the message: %1$S ", message.toUpperCase()));
                 message = input.nextLine(); //IMPORTANT blocking call
