@@ -19,44 +19,18 @@ public class MainServer {
     private static ServerSocket serverSocket;
     private static final Properties properties = Utils.initProperties("server.properties");
     private static List<ClientHandler> clients = new ArrayList<>();
-    
-    static Map<String,ClientHandler> onlineUsers = new HashMap<>();
-    private static List<ClientHandler> onlineUsersCC = new ArrayList<>();
+    static Map<String, ClientHandler> onlineUsers = new HashMap<>();
 
     public static void stopServer() {
         keepRunning = false;
     }
-//
-//    public static ArrayList printUsers() {
-//
-//        for (int i = 0; i < onlineUsers.size(); i++) {
-//            System.out.println("Prints from Server printUser: " + onlineUsers.get(i));
-//        }
-//
-//        return onlineUsers;
-
-    
-//
-//    public static void sendUsers() {
-//        for (ClientHandler c : onlineUsersCC) {
-//            c.sendUsers(onlineUsersCC);
-//        }
-//    }
 
     public static void send(String userName, String msg) {
         for (ClientHandler c : clients) {
             c.send(userName, msg);
-//            String input = msg;
-//            String output = input.substring(0, input.indexOf(':'));
-//            if (onlineUsers.contains(output)) {
-//
-//            } else {
-//                onlineUsers.add(output);
-//            }
         }
         System.out.println("Server message was: " + msg);
 
-        //printUsers();
     }
 
     public static void removeHandler(ClientHandler ch) {
@@ -66,28 +40,24 @@ public class MainServer {
     public static void main(String[] args) {
         new MainServer().handleConnections();
     }
-    
-    public void addClient(String userName, ClientHandler ch)
-    {
-        onlineUsers.put(userName, ch); 
+
+    public void addClient(String userName, ClientHandler ch) {
+        onlineUsers.put(userName, ch);
         sendOnline();
     }
-    
-    private void sendOnline()
-    {
+
+    private void sendOnline() {
         String onlineMessage = "ONLINE#";
-        
-        for(String user: onlineUsers.keySet())
-        {   
-            onlineMessage += user + ","; 
-            
+
+        for (String user : onlineUsers.keySet()) {
+            onlineMessage += user + ",";
+
         }
-        
-        for(ClientHandler ch : onlineUsers.values())
-        {
-            ch.send(onlineMessage,"");
+
+        for (ClientHandler ch : onlineUsers.values()) {
+            ch.sendOnline(onlineMessage);
         }
-        
+
     }
 
     private void handleConnections() throws NumberFormatException {
@@ -102,7 +72,7 @@ public class MainServer {
             do {
                 Socket socket = serverSocket.accept(); //Important Blocking call
                 Logger.getLogger(MainServer.class.getName()).log(Level.INFO, "Connected to a client");
-                ClientHandler clientHandler = new ClientHandler(socket,this);
+                ClientHandler clientHandler = new ClientHandler(socket, this);
                 new Thread(clientHandler).start();
             } while (keepRunning);
         } catch (IOException ex) {

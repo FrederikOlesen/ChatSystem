@@ -62,5 +62,9 @@ public class ClientHandler extends Thread {
         writer.println(msg);
         
     }
-
+    
+    public void sendOnline(String msg)
+    {
+        writer.println(msg);
+    }
 }
