@@ -111,8 +111,7 @@ public class ChatClient extends Thread implements ChatList{
                 public void messageArrived(String data) {
                     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
                 }
-            });
-            
+            });   
             tester.connect(ip, port);
             System.out.println("Sending 'Hello world'");
             //tester.send("Hello World");
