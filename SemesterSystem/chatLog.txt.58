@@ -1,0 +1,12 @@
+sep. 11, 2014 10:00:31 PM Server.MainServer handleConnections
+INFO: Connected to a client
+sep. 11, 2014 10:00:31 PM Server.ClientHandler run
+INFO: Received the message: CONNECT#MADS 
+sep. 11, 2014 10:00:31 PM Server.ClientHandler run
+INFO: Received the message: CONNECT#MADS 
+sep. 11, 2014 10:00:44 PM Server.MainServer handleConnections
+INFO: Connected to a client
+sep. 11, 2014 10:00:44 PM Server.ClientHandler run
+INFO: Received the message: CONNECT#FREDERI 
+sep. 11, 2014 10:00:44 PM Server.ClientHandler run
+INFO: Received the message: CONNECT#FREDERI 

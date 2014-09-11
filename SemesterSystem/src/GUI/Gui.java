@@ -20,7 +20,7 @@ import java.util.logging.Logger;
  * @author frederikolesen
  */
 public class Gui extends javax.swing.JFrame implements ChatList, ActionListener {
-
+    
     ChatClient cc = new ChatClient();
     Control c = new Control();
 
@@ -189,12 +189,13 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
     private void jButtonConnectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConnectActionPerformed
         try {
             cc.connect(jTextFieldHost.getText(), Integer.parseInt(jTextFieldPort.getText()));
-            jTextArea1.setText("Connected as: " + jTextFieldUsername.getText());
+            //jTextArea1.setText("Connected as: " + jTextFieldUsername.getText());
             cc.sendUserName(jTextFieldUsername.getText());
+           
         } catch (IOException ex) {
             Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        
 
     }//GEN-LAST:event_jButtonConnectActionPerformed
 
@@ -208,12 +209,12 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
     }//GEN-LAST:event_jButtonSubmitActionPerformed
 
     private void jButtonCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCloseActionPerformed
-
+        
         cc.closeConnection();
         Gui.this.dispose();
 
     }//GEN-LAST:event_jButtonCloseActionPerformed
-
+    
     public void actionPerformed(ActionEvent e) {
         System.exit(0);
     }
@@ -252,13 +253,14 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
             }
         });
     }
-
+    
     public void messageArrived(String data) {
         String text = jTextArea1.getText();
         if (!text.isEmpty()) {
             text += "\n";
         }
-        jTextArea1.setText(text + data);
+        jTextArea2.setText(data);
+        jTextArea1.setText(text);
     }
 
 

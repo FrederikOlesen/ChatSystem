@@ -30,9 +30,10 @@ public class ChatClient extends Thread implements ChatList{
     private InetAddress serverAddress;
     private Scanner input;
     private PrintWriter output;
+    
     List<ChatList> listeners = new ArrayList();
     ChatList cl = new ChatList() {
-        
+  
         @Override
         public void messageArrived(String data) {
             System.out.println("Message arrived" + data);
@@ -45,6 +46,7 @@ public class ChatClient extends Thread implements ChatList{
         socket = new Socket(serverAddress, port);
         input = new Scanner(socket.getInputStream());
         output = new PrintWriter(socket.getOutputStream(), true);  //Set to true, to get auto flush behaviour
+        
         start();
     }
     

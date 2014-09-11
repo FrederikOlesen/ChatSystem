@@ -27,16 +27,15 @@ public class MainServer {
         keepRunning = false;
     }
 
-    public static void send(String userName, String msg) {
-        ClientHandler c = null; 
-      
+    public static void send(String userName, String msg,ClientHandler ch) {
+        
         String user = userName; 
         System.out.println(user);
         System.out.println("Out of method");
         if (onlineUsers.containsKey(user))
         {
             System.out.println("Inside method");
-            c.send(userName, msg);
+            ch.send(userName, msg);
         }
        
 //        for (ClientHandler c : clients) {
