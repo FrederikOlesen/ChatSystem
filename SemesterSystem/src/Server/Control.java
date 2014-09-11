@@ -13,4 +13,7 @@ import java.util.ArrayList;
  * @author Mads
  */
 public class Control {
+    
+    MainServer ms;
+    
 }

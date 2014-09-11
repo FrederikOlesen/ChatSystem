@@ -41,6 +41,11 @@ public class ClientHandler extends Thread {
                     System.out.println("bla bla");
                     ms.addClient(protocolStrings[1], this);
                 }
+                if (protocolStrings[0].equals("SEND"))
+                {
+                    System.out.println("fucklort");
+                    send(protocolStrings[1],protocolStrings[2]); 
+                }
                 Logger.getLogger(MainServer.class.getName()).log(Level.INFO, String.format("Received the message: %1$S ", message.toUpperCase()));
                 message = input.nextLine(); //IMPORTANT blocking call
             }
@@ -52,7 +57,7 @@ public class ClientHandler extends Thread {
         }
     }
 
-    public void send(String msg) {
+    public void send(String userName, String msg) {
         System.out.println("bla bla send");
         writer.println(msg);
         

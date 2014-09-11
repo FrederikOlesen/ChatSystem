@@ -36,16 +36,16 @@ public class MainServer {
 //        return onlineUsers;
 
     
+//
+//    public static void sendUsers() {
+//        for (ClientHandler c : onlineUsersCC) {
+//            c.sendUsers(onlineUsersCC);
+//        }
+//    }
 
-    public static void sendUsers() {
-        for (ClientHandler c : onlineUsersCC) {
-           // c.sendUsers(onlineUsersCC);
-        }
-    }
-
-    public static void send(String msg) {
+    public static void send(String userName, String msg) {
         for (ClientHandler c : clients) {
-            c.send(msg);
+            c.send(userName, msg);
 //            String input = msg;
 //            String output = input.substring(0, input.indexOf(':'));
 //            if (onlineUsers.contains(output)) {
@@ -78,14 +78,14 @@ public class MainServer {
         String onlineMessage = "ONLINE#";
         
         for(String user: onlineUsers.keySet())
-        {
+        {   
             onlineMessage += user + ","; 
             
         }
         
         for(ClientHandler ch : onlineUsers.values())
         {
-            ch.send(onlineMessage);
+            ch.send(onlineMessage,"");
         }
         
     }
