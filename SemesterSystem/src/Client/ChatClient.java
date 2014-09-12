@@ -85,21 +85,19 @@ public class ChatClient extends Thread implements ChatList {
         return online;
     }
 
-    public String receive() {
-        String msg = input.nextLine();
-        if (msg.equals(ProtocolStrings.STOP)) {
-            try {
-                socket.close();
-            } catch (IOException ex) {
-                Logger.getLogger(ChatClient.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-        return msg;
+    public static String setIP(String IP)
+    {
+        return IP; 
     }
-
+    
+    public static int setPort(int port)
+    {
+        return port;
+    }
+    
     public static void main(String[] args) {
-        int port = 9090;
-        String ip = "localhost";
+        int port = setPort(0);
+        String ip = setIP(""); 
         if (args.length == 2) {
             port = Integer.parseInt(args[0]);
             ip = args[1];
@@ -152,6 +150,8 @@ public class ChatClient extends Thread implements ChatList {
         }
     }
 
+
+
     @Override
     public void onlineArrived(String data) {
         System.out.println("Online arrived: " + data);
@@ -161,6 +161,5 @@ public class ChatClient extends Thread implements ChatList {
     public void messageArrived(String userName, String data) {
         System.out.println("Message arrived" + userName + data);
     }
-    
 
 }

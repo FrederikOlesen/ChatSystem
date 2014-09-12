@@ -31,7 +31,6 @@ public class MainServer {
         String all = "*";
         String user = userName;
         System.out.println(user);
-        System.out.println("Out of method");
         if (onlineUsers.containsKey(user)) {
             ClientHandler ch = onlineUsers.get(user);
             ch.send(ch, msg);
@@ -46,12 +45,7 @@ public class MainServer {
                 
             }
         }
-
-//        for (ClientHandler c : clients) {
-//            c.send(userName, msg);
-//        }
-        System.out.println("Server message was: " + msg);
-    }
+   }
     
     public static void removeHandler(ClientHandler ch) {
         clients.remove(ch);

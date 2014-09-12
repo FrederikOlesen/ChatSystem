@@ -1,0 +1,54 @@
+sep. 11, 2014 10:57:11 PM Server.MainServer handleConnections
+INFO: Connected to a client
+sep. 11, 2014 10:57:11 PM Server.ClientHandler run
+INFO: Received the message: CONNECT#MADS 
+sep. 11, 2014 10:57:11 PM Server.ClientHandler run
+INFO: Received the message: CONNECT#MADS 
+sep. 11, 2014 10:57:18 PM Server.MainServer handleConnections
+INFO: Connected to a client
+sep. 11, 2014 10:57:18 PM Server.ClientHandler run
+INFO: Received the message: CONNECT#FREDERIK 
+sep. 11, 2014 10:57:18 PM Server.ClientHandler run
+INFO: Received the message: CONNECT#FREDERIK 
+sep. 11, 2014 10:57:30 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:32 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:33 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:33 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:33 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:33 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:34 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:34 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:34 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:34 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:34 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:35 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:35 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:35 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:35 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:35 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:35 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:35 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:35 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:36 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 11, 2014 10:57:36 PM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
