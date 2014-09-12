@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package Client;
 
 /**
@@ -11,5 +10,8 @@ package Client;
  * @author frederikolesen
  */
 public interface ChatList {
-    void messageArrived(String	data);
+
+    void onlineArrived(String data);
+
+    void messageArrived(String userName, String data);
 }

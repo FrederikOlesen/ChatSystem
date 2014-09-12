@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package Client;
 
 import Server.ClientHandler;
@@ -23,73 +22,69 @@ import java.util.logging.Logger;
  *
  * @author frederikolesen
  */
-public class ChatClient extends Thread implements ChatList{
-    
+public class ChatClient extends Thread implements ChatList {
+
     Socket socket;
     private int port;
     private InetAddress serverAddress;
     private Scanner input;
     private PrintWriter output;
-    
+
     List<ChatList> listeners = new ArrayList();
-    ChatList cl = new ChatList() {
-  
-        @Override
-        public void messageArrived(String data) {
-            System.out.println("Message arrived" + data);
-        }
-    };
-    
+
     public void connect(String address, int port) throws UnknownHostException, IOException {
         this.port = port;
         serverAddress = InetAddress.getByName(address);
         socket = new Socket(serverAddress, port);
         input = new Scanner(socket.getInputStream());
         output = new PrintWriter(socket.getOutputStream(), true);  //Set to true, to get auto flush behaviour
-        
+
         start();
     }
-    
+
     public void registerEchoListener(ChatList l) {
         listeners.add(l);
     }
-    
+
     ;
   
   public void unRegisterEchoListener(ChatList l) {
         listeners.remove(l);
     }
-    
+
     ;
   
   private void notifyListeners(String msg) {
-      for (ChatList l : listeners)
-        {
-            l.messageArrived(msg);
+        for (ChatList l : listeners) {
+            l.onlineArrived(msg);
         }
     }
-    
+
     public void send(String recieve, String msg) {
-        String msgFormat ="SEND#" + recieve + "#" + msg;
+        String msgFormat = "SEND#" + recieve + "#" + msg;
         output.println(msgFormat);
     }
-    
-    public void sendUserName(String userName)
-    {
-        String msgFormat ="CONNECT#" + userName;
+
+    public void sendUserName(String userName) {
+        String msgFormat = "CONNECT#" + userName;
         output.println(msgFormat);
     }
-    
-    public void closeSocket(String close)
-    {
-        String msgFormat = close+"#"; 
+
+    public void closeSocket(String close) {
+        String msgFormat = close + "#";
         output.println(msgFormat);
     }
-    
+
     public void close() throws IOException {
         output.println(ProtocolStrings.STOP);
     }
-    
+
+    public String sendOnline() {
+        String online = input.nextLine();
+        System.out.println(online);
+        return online;
+    }
+
     public String receive() {
         String msg = input.nextLine();
         if (msg.equals(ProtocolStrings.STOP)) {
@@ -101,7 +96,7 @@ public class ChatClient extends Thread implements ChatList{
         }
         return msg;
     }
-    
+
     public static void main(String[] args) {
         int port = 9090;
         String ip = "localhost";
@@ -112,12 +107,16 @@ public class ChatClient extends Thread implements ChatList{
         try {
             ChatClient tester = new ChatClient();
             tester.registerEchoListener(new ChatList() {
-
                 @Override
-                public void messageArrived(String data) {
+                public void onlineArrived(String data) {
                     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
                 }
-            });   
+
+                @Override
+                public void messageArrived(String userName, String data) {
+                    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                }
+            });
             tester.connect(ip, port);
             System.out.println("Sending 'Hello world'");
             //tester.send("Hello World");
@@ -130,7 +129,7 @@ public class ChatClient extends Thread implements ChatList{
             Logger.getLogger(ChatClient.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
     @Override
     public void run() {
         String msg = input.nextLine();
@@ -145,18 +144,23 @@ public class ChatClient extends Thread implements ChatList{
         }
     }
 
-    @Override
-    public void messageArrived(String data) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-     public void closeConnection()
-    {
+    public void closeConnection() {
         try {
             socket.close();
         } catch (IOException ex) {
             Logger.getLogger(ClientHandler.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    @Override
+    public void onlineArrived(String data) {
+        System.out.println("Online arrived: " + data);
+    }
+
+    @Override
+    public void messageArrived(String userName, String data) {
+        System.out.println("Message arrived" + userName + data);
+    }
+    
 
 }

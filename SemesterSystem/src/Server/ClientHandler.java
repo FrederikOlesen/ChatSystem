@@ -30,7 +30,7 @@ public class ClientHandler extends Thread {
     @Override
     public void run() {
         try {
-            
+
             String message = input.nextLine(); //IMPORTANT blocking call
             String[] protocolStrings = message.split("#");
             socket.getOutputStream().flush();
@@ -40,17 +40,15 @@ public class ClientHandler extends Thread {
                 if (protocolStrings[0].equals("CONNECT")) {
                     ms.addClient(protocolStrings[1], this);
                 }
-                if (protocolStrings[0].equals("SEND"))
-                {
-                    MainServer.send(protocolStrings[1],protocolStrings[2]); 
+                if (protocolStrings[0].equals("SEND")) {
+                    MainServer.send(protocolStrings[1], protocolStrings[2]);
                 }
-                if (protocolStrings[0].equals("CLOSE"))
-                {
+                if (protocolStrings[0].equals("CLOSE")) {
                     System.out.println("closing the socket");
                     socket.close();
                 }
                 Logger.getLogger(MainServer.class.getName()).log(Level.INFO, String.format("Received the message: %1$S ", message.toUpperCase()));
-                
+
                 message = input.nextLine(); //IMPORTANT blocking call
                 socket.getOutputStream().flush();
                 protocolStrings = message.split("#");
@@ -68,6 +66,8 @@ public class ClientHandler extends Thread {
     }
 
     public void sendOnline(String msg) {
+        System.out.println("Inside sendOnline ClientHandler" + msg);
+
         writer.println(msg);
     }
 }

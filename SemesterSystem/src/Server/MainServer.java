@@ -10,69 +10,78 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import Utils.Utils;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class MainServer {
-
+    
     private static boolean keepRunning = true;
     private static ServerSocket serverSocket;
     private static final Properties properties = Utils.initProperties("server.properties");
     private static List<ClientHandler> clients = new ArrayList<>();
     static Map<String, ClientHandler> onlineUsers = new HashMap<>();
-
-    
     
     public static void stopServer() {
         keepRunning = false;
     }
-
+    
     public static void send(String userName, String msg) {
-        
-        String user = userName; 
+        String all = "*";
+        String user = userName;
         System.out.println(user);
         System.out.println("Out of method");
-        if (onlineUsers.containsKey(user))
-        {
-            ClientHandler ch = onlineUsers.get(user); 
+        if (onlineUsers.containsKey(user)) {
+            ClientHandler ch = onlineUsers.get(user);
             ch.send(ch, msg);
         }
-       
+        if (userName.equals(all)) {
+            ArrayList<ClientHandler> as = new ArrayList<>();
+            as.addAll(onlineUsers.values());
+            
+            for (int i = 0; i < as.size(); i++) {
+                ClientHandler ch = as.get(i);                
+                ch.send(ch, msg);
+                
+            }
+        }
+
 //        for (ClientHandler c : clients) {
 //            c.send(userName, msg);
 //        }
         System.out.println("Server message was: " + msg);
     }
-
+    
     public static void removeHandler(ClientHandler ch) {
         clients.remove(ch);
     }
-
+    
     public static void main(String[] args) {
         new MainServer().handleConnections();
     }
-
+    
     public void addClient(String userName, ClientHandler ch) {
         onlineUsers.put(userName, ch);
         sendOnline();
         System.out.println(onlineUsers.size());
         
     }
-
+    
     private void sendOnline() {
         String onlineMessage = "ONLINE#";
-
+        
         for (String user : onlineUsers.keySet()) {
             onlineMessage += user + ",";
-
+            
         }
-
+        
         for (ClientHandler ch : onlineUsers.values()) {
             ch.sendOnline(onlineMessage);
         }
-
+        
     }
-
+    
     private void handleConnections() throws NumberFormatException {
         int port = Integer.parseInt(properties.getProperty("port"));
         String ip = properties.getProperty("serverIp");

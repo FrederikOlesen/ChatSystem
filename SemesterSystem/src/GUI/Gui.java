@@ -20,7 +20,7 @@ import java.util.logging.Logger;
  * @author frederikolesen
  */
 public class Gui extends javax.swing.JFrame implements ChatList, ActionListener {
-    
+
     ChatClient cc = new ChatClient();
     Control c = new Control();
 
@@ -191,11 +191,13 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
             cc.connect(jTextFieldHost.getText(), Integer.parseInt(jTextFieldPort.getText()));
             //jTextArea1.setText("Connected as: " + jTextFieldUsername.getText());
             cc.sendUserName(jTextFieldUsername.getText());
-           
+
+            //System.out.println(cc.sendOnline());
+            //jTextArea2.setText(cc.sendOnline());
         } catch (IOException ex) {
             Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
 
     }//GEN-LAST:event_jButtonConnectActionPerformed
 
@@ -203,9 +205,8 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
         String message = jTextFieldMessage.getText();
         //messageArrived(message);
         cc.send(jTextFieldReciever.getText(), message);
-      
-        // TODO add your handling code here:
 
+        // TODO add your handling code here:
 
     }//GEN-LAST:event_jButtonSubmitActionPerformed
 
@@ -213,9 +214,9 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
         cc.closeSocket(jTextFieldMessage.getText());
         cc.closeConnection();
         Gui.this.dispose();
-        
+
     }//GEN-LAST:event_jButtonCloseActionPerformed
-    
+
     public void actionPerformed(ActionEvent e) {
         System.exit(0);
     }
@@ -254,16 +255,6 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
             }
         });
     }
-    
-    @Override
-    public void messageArrived(String data) {
-        String text = jTextArea1.getText();
-        if (!text.isEmpty()) {
-            text += "\n";
-        }
-        jTextArea2.setText(data+text);
-        jTextArea1.setText(text+data);
-    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -285,4 +276,27 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
     private javax.swing.JTextField jTextFieldReciever;
     private javax.swing.JTextField jTextFieldUsername;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void onlineArrived(String data) {
+        String text = jTextArea1.getText();
+        if (!text.isEmpty()) {
+            text += "\n";
+        }
+        //jTextArea2.setText(cc.sendOnline());
+        if (data.startsWith("ONLINE")) {
+            jTextArea2.setText(data);
+        } else {
+            jTextArea1.setText(text + data);
+        }
+    }
+
+    @Override
+    public void messageArrived(String userName, String data) {
+        String text = jTextArea1.getText();
+        if (!text.isEmpty()) {
+            text += "\n";
+        }
+        jTextArea1.setText(text + data);
+    }
 }
