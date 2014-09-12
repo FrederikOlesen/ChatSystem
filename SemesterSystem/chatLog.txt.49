@@ -1,8 +1,0 @@
-sep. 11, 2014 9:10:39 PM Server.MainServer handleConnections
-INFO: Connected to a client
-sep. 11, 2014 9:10:41 PM Server.MainServer handleConnections
-INFO: Connected to a client
-sep. 11, 2014 9:10:44 PM Server.ClientHandler run
-INFO: Received the message: SEND#1#HEJ 
-sep. 11, 2014 9:10:44 PM Server.ClientHandler run
-INFO: Received the message: SEND#1#HEJ 

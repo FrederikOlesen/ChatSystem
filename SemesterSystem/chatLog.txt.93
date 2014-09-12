@@ -1,6 +1,0 @@
-sep. 12, 2014 9:56:46 AM Server.MainServer handleConnections
-INFO: Connected to a client
-sep. 12, 2014 9:56:46 AM Server.ClientHandler run
-INFO: Received the message: CONNECT#MADS 
-sep. 12, 2014 9:56:46 AM Server.ClientHandler run
-INFO: Received the message: CONNECT#MADS 
