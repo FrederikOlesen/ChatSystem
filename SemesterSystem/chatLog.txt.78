@@ -1,0 +1,100 @@
+sep. 12, 2014 9:26:40 AM Server.MainServer handleConnections
+INFO: Connected to a client
+sep. 12, 2014 9:26:40 AM Server.ClientHandler run
+INFO: Received the message: CONNECT#FREDERIK 
+sep. 12, 2014 9:26:40 AM Server.ClientHandler run
+INFO: Received the message: CONNECT#FREDERIK 
+sep. 12, 2014 9:26:47 AM Server.MainServer handleConnections
+INFO: Connected to a client
+sep. 12, 2014 9:26:47 AM Server.ClientHandler run
+INFO: Received the message: CONNECT#MADS 
+sep. 12, 2014 9:26:47 AM Server.ClientHandler run
+INFO: Received the message: CONNECT#MADS 
+sep. 12, 2014 9:26:51 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:02 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:03 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:03 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:03 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:03 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:03 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:03 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:03 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:04 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:04 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:04 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:04 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:04 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:05 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:05 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:05 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:05 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:05 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:05 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:05 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:05 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:06 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:06 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:06 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:06 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:06 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:06 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:06 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:07 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:07 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:07 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:07 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:07 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:07 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:07 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:08 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:08 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:08 AM Server.ClientHandler run
+INFO: Received the message: SEND#FREDERIK#ENTER MESSAGE 
+sep. 12, 2014 9:27:50 AM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#ENTER MESSAGE 
+sep. 12, 2014 9:27:50 AM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#ENTER MESSAGE 
+sep. 12, 2014 9:27:50 AM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#ENTER MESSAGE 
+sep. 12, 2014 9:27:50 AM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#ENTER MESSAGE 
+sep. 12, 2014 9:27:50 AM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#ENTER MESSAGE 

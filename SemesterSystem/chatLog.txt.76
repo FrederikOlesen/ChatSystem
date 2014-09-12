@@ -1,0 +1,28 @@
+sep. 12, 2014 9:11:20 AM Server.MainServer handleConnections
+INFO: Connected to a client
+sep. 12, 2014 9:11:20 AM Server.ClientHandler run
+INFO: Received the message: CONNECT#MADS 
+sep. 12, 2014 9:11:20 AM Server.ClientHandler run
+INFO: Received the message: CONNECT#MADS 
+sep. 12, 2014 9:11:25 AM Server.MainServer handleConnections
+INFO: Connected to a client
+sep. 12, 2014 9:11:25 AM Server.ClientHandler run
+INFO: Received the message: CONNECT#FREDERIK 
+sep. 12, 2014 9:11:25 AM Server.ClientHandler run
+INFO: Received the message: CONNECT#FREDERIK 
+sep. 12, 2014 9:11:32 AM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 12, 2014 9:11:33 AM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 12, 2014 9:11:33 AM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 12, 2014 9:11:33 AM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 12, 2014 9:11:33 AM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 12, 2014 9:11:33 AM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 12, 2014 9:11:34 AM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 
+sep. 12, 2014 9:11:35 AM Server.ClientHandler run
+INFO: Received the message: SEND#MADS#HEJ 

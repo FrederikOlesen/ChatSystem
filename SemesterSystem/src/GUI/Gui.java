@@ -203,6 +203,7 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
         String message = jTextFieldMessage.getText();
         //messageArrived(message);
         cc.send(jTextFieldReciever.getText(), message);
+      
         // TODO add your handling code here:
 
 
@@ -254,13 +255,14 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
         });
     }
     
+    @Override
     public void messageArrived(String data) {
         String text = jTextArea1.getText();
         if (!text.isEmpty()) {
             text += "\n";
         }
-        jTextArea2.setText(data);
-        jTextArea1.setText(text);
+        jTextArea2.setText(data+text);
+        jTextArea1.setText(text+data);
     }
 
 
