@@ -80,6 +80,12 @@ public class ChatClient extends Thread implements ChatList{
         output.println(msgFormat);
     }
     
+    public void closeSocket(String close)
+    {
+        String msgFormat = close+"#"; 
+        output.println(msgFormat);
+    }
+    
     public void close() throws IOException {
         output.println(ProtocolStrings.STOP);
     }

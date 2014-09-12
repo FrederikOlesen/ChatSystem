@@ -38,16 +38,23 @@ public class ClientHandler extends Thread {
             while (!message.equals(ProtocolStrings.STOP)) {
 //                writer.println(message.toUpperCase());
                 if (protocolStrings[0].equals("CONNECT")) {
-                    System.out.println("bla bla");
+                    System.out.println("inside CONNECT");
                     ms.addClient(protocolStrings[1], this);
                 }
                 if (protocolStrings[0].equals("SEND"))
                 {
-                    System.out.println("fucklort");
+                    System.out.println("inside SEND");
                     MainServer.send(protocolStrings[1],protocolStrings[2],this); 
                 }
+                if (protocolStrings[0].equals("CLOSE"))
+                {
+                    System.out.println("closing the socket");
+                    socket.close();
+                }
                 Logger.getLogger(MainServer.class.getName()).log(Level.INFO, String.format("Received the message: %1$S ", message.toUpperCase()));
+                
                 message = input.nextLine(); //IMPORTANT blocking call
+                protocolStrings = message.split("#");
             }
             writer.println(ProtocolStrings.STOP);//Echo the stop message back to the client for a nice closedown
             socket.close();

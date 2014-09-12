@@ -209,10 +209,10 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
     }//GEN-LAST:event_jButtonSubmitActionPerformed
 
     private void jButtonCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCloseActionPerformed
-        
+        cc.closeSocket(jTextFieldMessage.getText());
         cc.closeConnection();
         Gui.this.dispose();
-
+        
     }//GEN-LAST:event_jButtonCloseActionPerformed
     
     public void actionPerformed(ActionEvent e) {
