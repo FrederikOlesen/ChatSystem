@@ -293,10 +293,6 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
 
     @Override
     public void messageArrived(String userName, String data) {
-        String text = jTextArea1.getText();
-        if (!text.isEmpty()) {
-            text += "\n";
-        }
-        jTextArea1.setText(text + data);
+
     }
 }

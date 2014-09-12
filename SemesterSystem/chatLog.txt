@@ -1,16 +1,20 @@
-sep 10, 2014 10:17:21 AM Server.MainServer main
+sep 12, 2014 10:29:44 AM Server.MainServer handleConnections
 INFO: Connected to a client
-sep 10, 2014 10:17:23 AM Server.MainServer main
-INFO: Connected to a client
-sep 10, 2014 10:17:29 AM Server.ClientHandler run
-INFO: Received the message: HEJ G VELKOMMEN 
-sep 10, 2014 10:17:29 AM Server.ClientHandler run
-INFO: Received the message: HEJ G VELKOMMEN 
-sep 10, 2014 10:17:37 AM Server.ClientHandler run
-INFO: Received the message: HEJ G VELKOMMEN 
-sep 10, 2014 10:17:37 AM Server.ClientHandler run
-INFO: Received the message: HEJ G VELKOMMEN 
-sep 10, 2014 10:18:08 AM Server.ClientHandler run
-INFO: Received the message: HAHAHAHAHA 
-sep 10, 2014 10:18:13 AM Server.ClientHandler run
-INFO: Received the message: HIHIHIHIHI 
+sep 12, 2014 10:29:44 AM Server.ClientHandler run
+INFO: Received the message: GET /WELCOME HTTP/1.1 
+sep 12, 2014 10:29:44 AM Server.ClientHandler run
+INFO: Received the message: GET /WELCOME HTTP/1.1 
+sep 12, 2014 10:29:44 AM Server.ClientHandler run
+INFO: Received the message: HOST: LOCALHOST:9090 
+sep 12, 2014 10:29:44 AM Server.ClientHandler run
+INFO: Received the message: ACCEPT: TEXT/HTML,APPLICATION/XHTML+XML,APPLICATION/XML;Q=0.9,*/*;Q=0.8 
+sep 12, 2014 10:29:44 AM Server.ClientHandler run
+INFO: Received the message: ACCEPT-LANGUAGE: DA-DK 
+sep 12, 2014 10:29:44 AM Server.ClientHandler run
+INFO: Received the message: CONNECTION: KEEP-ALIVE 
+sep 12, 2014 10:29:44 AM Server.ClientHandler run
+INFO: Received the message: ACCEPT-ENCODING: GZIP, DEFLATE 
+sep 12, 2014 10:29:44 AM Server.ClientHandler run
+INFO: Received the message: USER-AGENT: MOZILLA/5.0 (MACINTOSH; INTEL MAC OS X 10_9_4) APPLEWEBKIT/537.77.4 (KHTML, LIKE GECKO) VERSION/7.0.5 SAFARI/537.77.4 
+sep 12, 2014 10:29:44 AM Server.ClientHandler run
+INFO: Received the message:  
