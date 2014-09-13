@@ -1,0 +1,6 @@
+sep. 13, 2014 1:22:33 PM Server.MainServer handleConnections
+INFO: Connected to a client
+sep. 13, 2014 1:22:33 PM Server.ClientHandler run
+INFO: Received the message: CONNECT#FREDERIK 
+sep. 13, 2014 1:22:33 PM Server.ClientHandler run
+INFO: Received the message: CONNECT#FREDERIK 
