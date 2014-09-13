@@ -7,7 +7,6 @@ package GUI;
 
 import Client.ChatClient;
 import Client.ChatList;
-import Server.ClientHandler;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -204,8 +203,8 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
         try {
             cc.connect(jTextFieldHost.getText(), Integer.parseInt(jTextFieldPort.getText()));
             cc.sendUserName(jTextFieldUsername.getText());
-            ChatClient.setIP(jTextFieldHost.getText()); 
-            ChatClient.setPort(Integer.parseInt(jTextFieldPort.getText()));  
+            ChatClient.setIP(jTextFieldHost.getText());
+            ChatClient.setPort(Integer.parseInt(jTextFieldPort.getText()));
         } catch (IOException ex) {
             Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, null, ex);
 

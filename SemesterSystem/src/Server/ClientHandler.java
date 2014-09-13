@@ -7,7 +7,6 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import Utils.ProtocolStrings;
-import java.util.ArrayList;
 
 /**
  *
@@ -66,6 +65,6 @@ public class ClientHandler extends Thread {
     }
 
     public void sendOnline(String msg) {
-       writer.println(msg);
+        writer.println(msg);
     }
 }

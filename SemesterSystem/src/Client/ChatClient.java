@@ -85,19 +85,17 @@ public class ChatClient extends Thread implements ChatList {
         return online;
     }
 
-    public static String setIP(String IP)
-    {
-        return IP; 
+    public static String setIP(String IP) {
+        return IP;
     }
-    
-    public static int setPort(int port)
-    {
+
+    public static int setPort(int port) {
         return port;
     }
-    
+
     public static void main(String[] args) {
         int port = setPort(0);
-        String ip = setIP(""); 
+        String ip = setIP("");
         if (args.length == 2) {
             port = Integer.parseInt(args[0]);
             ip = args[1];
@@ -149,8 +147,6 @@ public class ChatClient extends Thread implements ChatList {
             Logger.getLogger(ClientHandler.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
-
 
     @Override
     public void onlineArrived(String data) {
