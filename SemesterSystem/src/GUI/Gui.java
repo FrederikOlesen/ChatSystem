@@ -59,6 +59,7 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("jFrame"); // NOI18N
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
