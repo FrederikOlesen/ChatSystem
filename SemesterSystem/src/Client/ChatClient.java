@@ -60,6 +60,10 @@ public class ChatClient extends Thread implements ChatList {
         }
     }
 
+    public boolean validateUser(String userName) {
+        return listeners.equals(userName);
+    }
+
     public void send(String recieve, String msg) {
         String msgFormat = "SEND#" + recieve + "#" + msg;
         output.println(msgFormat);

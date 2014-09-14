@@ -203,9 +203,15 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
     private void jButtonConnectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConnectActionPerformed
         try {
             cc.connect(jTextFieldHost.getText(), Integer.parseInt(jTextFieldPort.getText()));
-            cc.sendUserName(jTextFieldUsername.getText());
             ChatClient.setIP(jTextFieldHost.getText());
             ChatClient.setPort(Integer.parseInt(jTextFieldPort.getText()));
+            if (!cc.validateUser(jTextFieldUsername.getText())) {
+                cc.sendUserName(jTextFieldUsername.getText());
+
+            } else {
+                System.out.println("That username is already taken!");
+            }
+
         } catch (IOException ex) {
             Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, null, ex);
 
