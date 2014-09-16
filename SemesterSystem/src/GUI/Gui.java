@@ -205,12 +205,12 @@ public class Gui extends javax.swing.JFrame implements ChatList, ActionListener 
             cc.connect(jTextFieldHost.getText(), Integer.parseInt(jTextFieldPort.getText()));
             ChatClient.setIP(jTextFieldHost.getText());
             ChatClient.setPort(Integer.parseInt(jTextFieldPort.getText()));
-            if (!cc.validateUser(jTextFieldUsername.getText())) {
-                cc.sendUserName(jTextFieldUsername.getText());
-
-            } else {
-                System.out.println("That username is already taken!");
-            }
+            cc.sendUserName(jTextFieldUsername.getText());
+//            if (!cc.validateUser(jTextFieldUsername.getText())) {
+//
+//            } else {
+//                System.out.println("That username is already taken!");
+//            }
 
         } catch (IOException ex) {
             Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, null, ex);
